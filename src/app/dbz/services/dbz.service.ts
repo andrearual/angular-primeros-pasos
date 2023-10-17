@@ -22,6 +22,10 @@ export class DbzService {
       id: uuid(),
       name: 'Vegeta',
       power: 5000
+    }, {
+      id: uuid(),
+      name: 'werwerwerwer',
+      power: 5000
     }
   ];
 
@@ -35,6 +39,8 @@ export class DbzService {
     // el ejemplo no fue así, por ser un ejercicio, si lo hacemos así:
     //const newCharacter : Character = {id : uuid(), name: character.name, power : character.power};
     const newCharacter : Character = {id : uuid(), ...character};
+
+    newCharacter.name= character.name;
 
     this.characters.push(newCharacter);
   }
